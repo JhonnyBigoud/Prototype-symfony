@@ -6,24 +6,23 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/user', name: 'user_')]
-
+#[Route('', name: 'user_')]
 
 class UserController extends AbstractController
 {
-
-// -------------------------------------------------------------------------------
-
     #[Route('/login', name: 'login')]
     public function login(): Response
     {
-        return $this->render('user/login.html.twig');
+        return $this->render('user/login.html.twig', [
+            // 'controller_name' => 'UserController',
+        ]);
     }
-// -------------------------------------------------------------------------------
 
     #[Route('/register', name: 'register')]
     public function register(): Response
     {
-        return $this->render('user/register.html.twig');
+        return $this->render('user/register.html.twig', [
+            // 'controller_name' => 'UserController',
+        ]);
     }
 }

@@ -1,9 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GameController!{% endblock %}
+{% block title %}
+Catalogue - {{ parent() }}
+{% endblock %}
 
 {% block body %}
 
-<h1>Fiche de jeux</h1>
 
+<h1>Liste des jeux</h1>
+<form action="">
+
+    <input type="text" placeholder = "Rechercher un jeu" id="liste" name="list">
+</form>
 {% endblock %}
